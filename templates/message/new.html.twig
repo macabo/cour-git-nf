@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau message{% endblock %}
+
+{% block body %}
+
+  {{ form_start(form)}}
+
+
+	<h1>HTML</h1>
+	{{ form_label(form.sender)}}
+	<br>
+	{{ form_widget(form.sender)}}
+	<br>
+    {{ form_label(form.receiver)}}
+	<br>
+	{{ form_widget(form.receiver)}}
+	<br>
+	{{ form_label(form.message)}}
+	<br>
+	{{ form_widget(form.message)}}
+	<br>
+	{{ form_widget(form.save, { 'label': 'Envoyer'} ) }}
+	<br>
+
+  {{ form_end(form)}}
+
+{% endblock %}
